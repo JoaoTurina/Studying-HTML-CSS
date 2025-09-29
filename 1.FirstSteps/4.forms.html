@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Formulários</title>
+    </head>
+    <body>
+        <form>
+            <fieldset id="cadastro">
+                <legend>Formulário de Cadastro</legend>
+                <div>
+                <label for="txtNome">Nome:</label>
+                    <input type="text" 
+                        name="nome"
+                        id="txtNome"
+                        size="40"
+                        maxlength="50"
+                        placeholder="Insira seu nome"/>
+                        <!-- types: text, email, password, number, date-->
+                </div>
+                <div>
+                <label for="txtEmail">eMail:</label>
+                    <input type="email" 
+                        name="email"
+                        id="txtEmail"
+                        size="30"
+                        placeholder="Insira seu email" />
+                </div>
+                <div>Idade:
+                    <input type="number" 
+                        name="idade"
+                        size="3"
+                        min="15"
+                        max="40" />
+                </div>
+                <div>Data de Nascimento:
+                    <input type="date" 
+                        name="nascimento" />
+                </div>
+                <div>Sexo: 
+                    <input type="radio" 
+                        name="sexo" 
+                        value="M" 
+                        id="sexoM" />
+                    <label for="sexoM">Masculino</label>
+                    <input type="radio" 
+                        name="sexo" 
+                        value="F" 
+                        id="sexoF" />
+                    <label for="sexoF">Feminino</label>
+                </div>
+                <div>Estado:
+                    <select name="estado">
+                        <optgroup label="Região Centro-Oeste">
+                            <option value="DF">Distrito Federal</option>
+                            <option value="GO">Goiás</option>
+                            <option value="MT">Mato Grosso</option>
+                            <option value="MS" selected>Mato Grosso do Sul</option>
+                        </optgroup>
+                        <optgroup label="Região Sudeste">
+                            <option value="SP">São Paulo</option>
+                            <option value="RJ">Rio de Janeiro</option>
+                        </optgroup>
+                        <optgroup label="Região Sul">
+                            <option value="RS">Rio Grande do Sul</option>
+                            <option value="SC">Santa Catarina</option>
+                        </optgroup>
+                    </select>
+                </div>
+                <div>Cidade:
+                    <input type="text" 
+                        name="cidade"
+                        id="txtCidade"
+                        size="20"
+                        list="listCidades" />
+                    <datalist id="listCidades">
+                        <option value="Campo Grande" />
+                        <option value="Dourados" />
+                        <option value="Três Lagoas" />
+                        <option value="São Paulo" />
+                        <option value="Rio de Janeiro" />
+                    </datalist>
+                </div>
+                <div>Fale sobre você:
+                    <textarea name="faleSobre"
+                        id="txtFaleSobre"
+                        cols="45"
+                        rows="5">
+                    </textarea>  
+                </div>
+                <div>Cor da camiseta:
+                    <input type="color" 
+                        name="corCamiseta"
+                        id="escolheCor" />
+                </div>
+                <div>Nível de conhecimento de inglês:
+                    baixo 
+                    <input type="range" 
+                        name="nivelIngles"
+                        min="0"
+                        max="10"
+                        step="1"
+                        value="5" />
+                    alto</div>
+                <div>Quero receber emails com notícias
+                    <input type="checkbox" 
+                        name="receberEmail" />
+                </div>
+                <input type="submit" value="ENVIAR" />
+                <input type="reset" value="APAGAR" />
+            </fieldset>
+        </form>
+    </body>
+</html>
